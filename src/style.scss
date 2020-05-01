@@ -1,19 +1,14 @@
 body {
+   font-family: 'Pacifico', cursive;
 margin: 0 auto;
-background-color: grey;
-color: white;
 display: flex;
 justify-content: center;
 }
 
-.mainDiv{
+.jokeContainer{
     display: flex;
     justify-items: center;
+    font-size: 24px;;
 }
 
-p {
-    
-    font-size: 24px;
-
-}
 

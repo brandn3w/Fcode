@@ -1,19 +1,21 @@
 
 import React from "react";
-import Todo from "./components/Todo";
+
+import Joke from "./Joke"
+import style from "./style.scss"
+import jokesData from "./jokesData"
+
+function App() {
+    const jokeComponents = jokesData.map(joke =>  <Joke key={joke.id} question={joke.question} punchline={joke.punchline} />)
 
 
-function App () {
-    
-    return(
-    
-    <div>
-<Todo />
-<Todo />
-<Todo />
-<Todo />
-   </div>
+    return (
+
+        <div className={style.jokeContainer}>
+{jokeComponents }
+</div>
+
     )
-}
+    }
 
 export default App;
