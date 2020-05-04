@@ -5,21 +5,22 @@ class App extends React.Component {
     constructor() {
         super()
         this.state = {
-            isLoggedIn: true
+            count:0
         }
+        this.handleClick = this.handleClick.bind(this)
+    }
+    handleClick(){
+        this.setState(prevState=>{
+return{
+    count: prevState.count+1
+}
+        })
     }
     render(){
-        let wordDisplay
-        if(this.state.isLoggedIn===true){
-wordDisplay="in"
-        }else{
-wordDisplay="out"
-        }
-    
-
-        return (
-            <div >
-                <h1 > You are currently logged {wordDisplay}</h1>
+        return(
+            <div>
+                <h1>{this.state.count}</h1>
+                <button onClick={this.handleClick }>Change</button>
             </div>
         )
     }
