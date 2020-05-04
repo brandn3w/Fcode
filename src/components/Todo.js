@@ -2,12 +2,13 @@
 import React from "react";
 import style from "../style.scss";
 
-function Todo() {
+
+function Todo(props) {
 
   return (
     <div className={style.mainDiv}>
       <input type="checkbox" />
-        <p className={style.p}>placeholder</p>
+        <p className={style.p}>{props.item.item}</p>
      
     </div>
   )
