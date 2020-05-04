@@ -1,19 +1,28 @@
-
-import React from "react";
-import Todo from "./components/Todo";
+import React from "react"
 
 
-function App () {
+class App extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            isLoggedIn: true
+        }
+    }
+    render(){
+        let wordDisplay
+        if(this.state.isLoggedIn===true){
+wordDisplay="in"
+        }else{
+wordDisplay="out"
+        }
     
-    return(
-    
-    <div>
-<Todo />
-<Todo />
-<Todo />
-<Todo />
-   </div>
-    )
+
+        return (
+            <div >
+                <h1 > You are currently logged {wordDisplay}</h1>
+            </div>
+        )
+    }
 }
 
-export default App;
+export default App
